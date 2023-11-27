@@ -7,7 +7,7 @@ This is an Arduino-based project that uses a [frequency-modulated continuous-wav
 ![Radar Light Control](photos/IMG_6396.JPG)
 
 
-> [!NOTE]
+> [!IMPORTANT]
 > If you plan on building one of these to replace an existing light switch, a neutral wire must be present!  [See the section below for details](#heads-up-a-neutral-wire-is-required).
 
 
@@ -53,15 +53,12 @@ These components are pretty much mandatory, as the 3D-printable enclosure was de
  5. [5V Isolated Relay Module](https://amzn.to/3SyeOrx)  
     This is what is actually switching the 120VAC mains power to the light fixture in place of the original light switch.  These use an optocoupler to electrically isolate the 120VAC from the low-voltage electronics, along with the physical cutout on the PCB around the common terminal.
 
-    > [!IMPORTANT]
-    > Ensure your lighting load is less than 1,000 watts!
+    **Note:** Ensure your lighting load is less than 1,000 watts!
 
  6. [Mini 120VAC-to-5VDC Power Supply Module](https://amzn.to/3SnFDPc)  
     This is how we power the low-voltage electronics.  According to my measurements, the completed device draws less than 200mA with the radar at full power and the relay active.
 
-    > [!NOTE]
-    > The switch box where the completed device is to be mounted _must_ contain a neutral conductor.
-    > [Read more below](#heads-up-a-neutral-wire-is-required)
+    **Note:** The switch box where the completed device is to be mounted _must_ contain a neutral conductor. [Read more below](#heads-up-a-neutral-wire-is-required)
 
  7. [16mm SPST Momentary Pushbutton](https://amzn.to/3QnYvel)  
     Used to select between auto mode and manual on/off mode.  There's nothing significant about the size, it's just what I had on hand when I started the project.  If you prefer a different size, you can change the size of the hole in the F3D file.
@@ -98,8 +95,7 @@ And don't forget the wire:
 
  15. The short pigtails you see in the photos between the Wago connectors and the relay module is 16 AWG stranded.  The solid 14 AWG (or possibly 12 AWG) wire inside the switch box will be quite stiff, and it's very likely it will cause the long stand-offs under the relay module to break.  The stranded pigtails help alleviate this stress, 16 AWG was acceptable for my purpose since the total load from my lighting is only 400W (3.33A @ 120VAC).
 
-     > [!IMPORTANT]
-     > Size the pigtails appropriately!  If they're too small, they can overheat and pose a fire hazard.
+     **Note:** Size the pigtails appropriately!  If they're too small, they can overheat and pose a fire hazard.
 
 
 #### Notes about ferrules:
@@ -133,7 +129,7 @@ If you are intending to replace an existing light switch with this device, you m
 
 Depending on the age of your home, there may or may not be a neutral available in the switch box.  Since 2011, NEC has required (with certain exceptions) that a neutral be present at every switch box (see Section 404.2(C) "Switches Controlling Lighting Loads" for reference).
 
-> [!NOTE]
+> [!TIP]
 > **Double-check!**  It would _suck_ to spend the time and money to build this and then not be able to use it!
 
 What this means:
